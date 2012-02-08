@@ -7,7 +7,7 @@ from django.conf import settings
 
 def get_afinn():
     afinn = dict(map(lambda (w, s): (w, int(s)), [ 
-                ws.strip().split('\t') for ws in open('%s/%s' % (settings.AFINN_ROOT, AFINN_VERSION)) ]))
+                ws.strip().split('\t') for ws in open('%s%s' % (settings.AFINN_ROOT, AFINN_VERSION)) ]))
 
     return afinn
 
